@@ -27,6 +27,7 @@ class Piwik_AdminOverview_Controller extends Piwik_Controller
         $view->usersCount = Piwik_AdminOverview_API::getInstance()->getTotalUsersCount();
         $this->setBasicVariablesView($view);
         $view->menu = Piwik_GetAdminMenu();
+	$view->topMenu = Piwik_GetTopMenu();
         echo $view->render();
 	}
     
